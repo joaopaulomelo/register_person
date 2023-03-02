@@ -14,6 +14,10 @@ API for registering and simple consultation of people.
 - php artisan key:generate
 - php artisan serve
 
+## Run Tests
+
+- php artisan test
+
 ## TODOS
 
 Searchs e paginate nos endpoints
