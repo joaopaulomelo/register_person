@@ -15,7 +15,7 @@ class PersonPhoneFactory extends Factory
     {
         return [
             'phone' => $this->faker->phoneNumber(),
-            'person_id' => 1,
+            'people_id' => 1,
         ];
     }
 }

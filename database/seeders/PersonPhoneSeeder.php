@@ -15,7 +15,7 @@ class PersonPhoneSeeder extends Seeder
     public function run()
     {
         DB::table('person_phones')->insert([
-            1 => ['id' => 1, 'phone' => '999999999', 'person_id' => 1]
+            1 => ['id' => 1, 'phone' => '999999999', 'people_id' => 1]
         ]);
     }
 }

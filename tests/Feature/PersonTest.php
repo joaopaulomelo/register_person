@@ -40,8 +40,8 @@ class PersonTest extends TestCase
 
         $person = Person::factory()->create();
         PersonPhone::factory()->create([
-            'phone' => $person->phone,
-            'person_id' => $person->id
+        'phone'=> $this->faker->phoneNumber,
+        'people_id' => $person->id
         ]);
 
         $response = $this->delete($this::BASE_URL.$this::PERSON_DELETE."/$person->id");
