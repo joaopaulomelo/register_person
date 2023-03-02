@@ -19,7 +19,7 @@ class PersonService
         $person = $this->person->create($request->only($this->person->getFillable()));
          PersonPhone::created([
             'phone' => $request->phone,
-            'person_id' => $person->id
+            'people_id' => $person->id
         ]);
         return $person;
     }
@@ -51,9 +51,9 @@ class PersonService
         $person = $this->show($person_id);
 
         if ($person) {
-            $this->person->find($person_id)->delete();
-            $collection = PersonPhone::where('person_id', $person_id)->get(['id']);
-            PersonPhone::destroy($collection->toArray());
+            // $this->person->find($person_id)->delete();
+            // $collection = PersonPhone::where('people_id', $person_id)->get(['id']);
+            // PersonPhone::destroy($collection->toArray());
 
             return true;
         } else {
